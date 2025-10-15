@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nadi Rakhma - Front-End Developer & Digital Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menambahkan font custom jika diinginkan, contoh: Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Kelas untuk animasi fade-in-up (tidak diubah) */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        // Konfigurasi custom warna untuk Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark-blue': '#0A192F', // Biru tua seperti tombol
+                        'brand-orange': '#FF4F00',   // Orange dari teks "Digital Designer"
+                        'brand-light-blue': '#CCD6F6',
+                        'brand-gray': '#8892B0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-brand-dark-blue">
+
+    <div class="container mx-auto px-6 md:px-12 py-6">
+
+        <header class="flex justify-between items-center fade-in-up">
+            <div class="flex items-center space-x-2">
+                <img src="assets/favicon.png" alt="Logo Nadi Rakhma" class="w-8 h-auto">
+                <a href="#" class="font-extrabold text-2xl">Nadi Rakhma</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10 text-lg font-semibold">
+                <a href="#" class="text-gray-600 hover:text-brand-orange transition-colors duration-300">Home</a>
+                <a href="#" class="text-gray-600 hover:text-brand-orange transition-colors duration-300">About</a>
+                <a href="#" class="text-gray-600 hover:text-brand-orange transition-colors duration-300">Projects</a>
+                <a href="#" class="text-gray-600 hover:text-brand-orange transition-colors duration-300">Skills</a>
+            </nav>
+            <button class="md:hidden">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start mt-16 md:mt-24">
+            
+            <div class="flex flex-col">
+                <div class="fade-in-up" style="transition-delay: 100ms;">
+                    <span class="bg-brand-dark-blue text-white text-36 font-bold px-8 py-2 rounded-full">
+                        Hi everyone, I'm Satria Rakhmadani 👋
+                    </span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold italic mt-6 fade-in-up" style="transition-delay: 200ms;">
+                    Front-End Developer & <span class="text-brand-orange">Digital Designer</span>
+                </h1>
+
+                <p class="text-brand-gray max-w-lg mt-6 text-lg fade-in-up" style="transition-delay: 300ms;">
+                    I'm a UI/UX and Digital Designer, as well as a Front-End Developer. Driven by curiosity and innovation, I aim to contribute to a forward-thinking environment to create meaningful and user-centered digital experiences.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row sm:items-center gap-6 fade-in-up" style="transition-delay: 400ms;">
+                    <a href="#" class="bg-brand-dark-blue text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-brand-orange transition-all duration-300 transform hover:-translate-y-1">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative fade-in-up delay-500">
+                <div class="relative w-72 md:w-96 mx-auto">
+                    <div class="absolute top-4 left-4 w-full h-full bg-brand-orange/20 rounded-3xl -z-10 
+                        transition-transform duration-300"></div>
+
+                        <div class="relative border-4 border-brand-dark-blue rounded-3xl p-4 z-10 bg-white 
+                            shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-x-1 hover:-translate-y-1">
+                            <img src="assets/photo.JPG" alt="Foto Satria Rakhmadani" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </div>
+
+    <section id="about" class="py-24">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold text-brand-dark-blue">About Me</h2>
+            <div class="mt-2 h-1.5 w-24 bg-brand-orange mx-auto rounded"></div>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+            <div class="md:col-span-2">
+                <div class="relative w-full max-w-sm mx-auto p-3 border-2 border-brand-dark-blue rounded-2xl shadow-lg">
+                    <img src="https://via.placeholder.com/500x600" alt="Foto Diri" class="w-full h-auto object-cover rounded-lg">
+                </div>
+            </div>
+
+            <div class="md:col-span-3">
+                <p class="text-brand-gray text-lg leading-relaxed">
+                    Hello! I'm Satria, a passionate Front-End Developer and Digital Designer based in Indonesia. With a keen eye for aesthetics and a deep love for clean, efficient code, I specialize in creating beautiful, user-friendly websites and digital experiences.
+                    <br><br>
+                    My journey into the world of tech began with a curiosity for how things work, which quickly evolved into a full-fledged passion for design and development. I believe that a great design is not just about looks, but about solving problems and creating intuitive interactions.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold text-brand-dark-blue">My Projects</h2>
+            <div class="mt-2 h-1.5 w-24 bg-brand-orange mx-auto rounded"></div>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-brand-dark-blue">Nama Proyek 1</h3>
+                    <p class="mt-3 text-brand-gray">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan tantangan yang dihadapi.</p>
+                    <a href="#" class="mt-4 inline-block text-brand-orange font-semibold hover:underline">
+                        View on GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-brand-dark-blue">Nama Proyek 2</h3>
+                    <p class="mt-3 text-brand-gray">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan tantangan yang dihadapi.</p>
+                    <a href="#" class="mt-4 inline-block text-brand-orange font-semibold hover:underline">
+                        View on GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-brand-dark-blue">Nama Proyek 3</h3>
+                    <p class="mt-3 text-brand-gray">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan tantangan yang dihadapi.</p>
+                    <a href="#" class="mt-4 inline-block text-brand-orange font-semibold hover:underline">
+                        View on GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                <img src="https://via.placeholder.com/600x400" alt="Project 4" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-brand-dark-blue">Nama Proyek 4</h3>
+                    <p class="mt-3 text-brand-gray">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan tantangan yang dihadapi.</p>
+                    <a href="#" class="mt-4 inline-block text-brand-orange font-semibold hover:underline">
+                        View on GitHub &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="py-24">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold text-brand-dark-blue">Tools & Skills</h2>
+            <div class="mt-2 h-1.5 w-24 bg-brand-orange mx-auto rounded"></div>
+        </div>
+        
+        <div class="mt-16 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">HTML5</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 95%"></div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">CSS3 & Tailwind</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">90%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">JavaScript</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">80%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">React.js</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">75%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">Figma</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">95%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 95%"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-base font-medium text-brand-dark-blue">Adobe XD</span>
+                    <span class="text-sm font-medium text-brand-dark-blue">85%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-brand-orange h-2.5 rounded-full" style="width: 85%"></div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="text-center">
+            <h2 class="text-4xl font-extrabold text-brand-dark-blue">Find Me On</h2>
+            <p class="mt-4 text-lg text-brand-gray max-w-2xl mx-auto">
+                Feel free to connect with me on any of the platforms below. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            </p>
+        </div>
+
+        <div class="mt-16 flex justify-center items-center flex-wrap gap-8 md:gap-12">
+
+            <!-- GitHub -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-gray-900 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fab fa-github text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">GitHub</p>
+            </div>
+
+            <!-- Behance -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fab fa-behance text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">Behance</p>
+            </div>
+
+            <!-- Dribbble -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-pink-500 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fab fa-dribbble text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">Dribbble</p>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-blue-700 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fab fa-linkedin-in text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">LinkedIn</p>
+            </div>
+            
+            <!-- Instagram -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fab fa-instagram text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">Instagram</p>
+            </div>
+
+            <!-- Portfolio -->
+            <div class="text-center group">
+                <a href="#" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center w-16 h-16 bg-indigo-600 text-white rounded-full transition-all duration-300 hover:scale-110 hover:shadow-xl">
+                    <i class="fas fa-globe text-3xl"></i>
+                </a>
+                <p class="mt-2 text-sm font-semibold text-brand-gray">Portfolio</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Elemen dianggap terlihat jika 10% areanya masuk viewport
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
